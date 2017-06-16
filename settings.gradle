@@ -1,0 +1,4 @@
+include 'eureka-client'
+include 'eureka-server'
+include 'config-server'
+
