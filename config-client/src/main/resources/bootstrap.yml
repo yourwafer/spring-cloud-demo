@@ -1,0 +1,8 @@
+server:
+  port: 7002
+spring:
+  application:
+    name: cloudconfig
+  cloud:
+    config:
+      uri: http://localhost:7001
