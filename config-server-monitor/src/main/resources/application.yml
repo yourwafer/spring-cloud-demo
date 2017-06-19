@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/yourwafer/spring-cloud-demo.git
+          searchPaths: ./config-resource
+server:
+  port: 7001
+# git管理配置
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+debug: false

@@ -3,7 +3,9 @@ spring:
     name: eureka-server
 server:
   port: 1111
-
+management:
+  security:
+    enabled: false
 eureka:
   instance:
     hostname: localhost
