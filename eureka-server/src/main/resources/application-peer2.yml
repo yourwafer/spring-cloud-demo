@@ -10,8 +10,5 @@ eureka:
   instance:
     hostname: localhost
   client:
-    healthcheck: true
-    register-with-eureka: true
-    fetch-registry: true
     service-url:
       defaultZone: http://${eureka.instance.hostname}:1111/eureka/

@@ -7,11 +7,14 @@ management:
   security:
     enabled: false
 eureka:
+  server:
+    eviction-interval-timer-in-ms: 1000
+#    enable-self-preservation: false
   instance:
     hostname: localhost
   client:
     healthcheck: true
-    register-with-eureka: false
+    register-with-eureka: true
     fetch-registry: false
     service-url:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
