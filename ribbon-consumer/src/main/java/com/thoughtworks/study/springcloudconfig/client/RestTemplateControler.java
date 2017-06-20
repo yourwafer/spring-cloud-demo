@@ -12,12 +12,11 @@ import org.springframework.web.client.RestTemplate;
 public class RestTemplateControler {
 
     @Autowired
-    private RestTemplate restTemplate;
+    RequestService service;
 
     @GetMapping
     public String requestClient(){
-        ResponseEntity<String> forEntity = restTemplate.getForEntity("http://EUREKA-CLIENT-1", String.class);
-        String body = forEntity.getBody();
+        String body = service.requestClient();
         return body;
     }
 }
