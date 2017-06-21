@@ -12,11 +12,11 @@ import org.springframework.web.client.RestTemplate;
 public class RestTemplateControler {
 
     @Autowired
-    FeignRequestService service;
+    FeignUserResource service;
 
     @GetMapping
     public String requestClient(){
-        String body = service.rquestHello();
+        String body = service.requestHello();
         return body;
     }
 }

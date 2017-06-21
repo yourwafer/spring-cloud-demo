@@ -1,6 +1,5 @@
 server:
   port: 9000
-debug: true
 management:
   security:
     enabled: false
@@ -15,6 +14,12 @@ EUREKA-CLIENT-1:
   ribbon:
     ConnectTimeout: 500
     ReadTimeout: 1000
-    OkToRetryOnAllOperations: false
+    OkToRetryOnAllOperations: true
     MaxAutoRetries: 1
-    MaxAutoRetriesNextSerer: 2
+    MaxAutoRetriesNextSerer: 1
+feign:
+  hystrix:
+    enabled: true
+logging:
+  level:
+    com.thoughtworks.study.springcloudconfig.client.FeignUserResource: DEBUG
