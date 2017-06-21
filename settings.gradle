@@ -4,4 +4,5 @@ include 'config-server'
 include 'config-client'
 include 'config-server-monitor'
 include 'ribbon-consumer'
+include 'feign-consumer'
 
