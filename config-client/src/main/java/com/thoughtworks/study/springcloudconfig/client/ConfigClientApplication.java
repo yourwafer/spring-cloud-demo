@@ -13,14 +13,25 @@ public class ConfigClientApplication {
     @Value("client-name")
     String serverName;
 
+    @Value("${from:default-value---0}")
+    String from;
+
+    @Value("${encrpt}")
+    String secret;
+
     @RequestMapping("/")
     public String home() {
-        return "Hello World!";
+        return from;
     }
 
     @RequestMapping("/name")
     public String name() {
         return serverName;
+    }
+
+    @RequestMapping("/secret")
+    public String secret() {
+        return secret;
     }
 
     public static void main(String[] args) {
