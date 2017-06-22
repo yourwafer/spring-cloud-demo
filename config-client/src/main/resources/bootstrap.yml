@@ -1,10 +1,16 @@
 server:
   port: 7002
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
 spring:
-  profiles:
-    active: dev
   application:
     name: cloudconfig
   cloud:
     config:
-      uri: http://localhost:7001
+      discovery:
+        enabled: true
+        service-id: CONFIG-SERVER
+      profiles:
+        active: dev
