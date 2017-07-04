@@ -1,6 +1,8 @@
 spring:
   application:
     name: eureka-client-1
+  zipkin:
+    base-url: http://localhost:8888
 eureka:
   client:
     serviceUrl:

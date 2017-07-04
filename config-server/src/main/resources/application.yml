@@ -17,3 +17,6 @@ eureka:
 debug: false
 encrypt:
   key: ConfigServer
+management:
+  security:
+    enabled: false

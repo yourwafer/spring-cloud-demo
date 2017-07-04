@@ -23,12 +23,9 @@ public class Controller {
     @RequestMapping("/")
     public String home() {
         List<String> services = client.getServices();
-        services.forEach(name -> {
-            System.out.println("---->" + name);
-        });
         try {
+            Thread.sleep(RandomUtils.nextInt(10) + 100);
             if(delay) {
-                Thread.sleep(RandomUtils.nextInt(1000) + 500);
             }
             delay = !delay;
         } catch (InterruptedException e) {

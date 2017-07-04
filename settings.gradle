@@ -7,3 +7,8 @@ include 'ribbon-consumer'
 include 'feign-consumer'
 include 'zuul-center'
 include 'cloud-bus'
+include 'dashboard'
+include 'sleuth'
+include 'zipkin-server'
+include 'RxJava'
+
